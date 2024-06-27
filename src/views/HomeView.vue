@@ -1,15 +1,23 @@
 <template>
+  <header class="dark-sticky-header">
+    <DarkStickyHeader />
+  </header>
   <main>
-    <TheWelcome />
+    <PhotoTitlePitch />
+    <ProjectPortfolio />
   </main>
 </template>
 
 <script>
-import TheWelcome from '../components/TheWelcome.vue'
+import DarkStickyHeader from '@/components/DarkStickyHeader.vue'
+import PhotoTitlePitch from '@/components/PhotoTitlePitch.vue'
+import ProjectPortfolio from '@/components/ProjectPortfolio.vue'
 
 export default {
   components: {
-    TheWelcome
+    DarkStickyHeader,
+    PhotoTitlePitch,
+    ProjectPortfolio
   }
 }
 </script>

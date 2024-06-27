@@ -4,13 +4,74 @@
   box-sizing: border-box;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@font-face {
+  font-family: 'Questa-Slab';
+  src: url(./fonts/questa_slab_regular_25.otf) format(opentype);
+}
+
+@font-face {
+  font-family: 'Work-Sans-ExtraLight';
+  src: url(./fonts/WorkSans-ExtraLight.otf) format(opentype);
+}
+
+@font-face {
+  font-family: 'Work-Sans-Light';
+  src: url(./fonts/WorkSans-Light.otf) format(opentype);
+}
+
+:root {
+  --dark-sticky-header: #333333;
+}
+
+html {
+  font-size: 10px;
+  /*   max-width: 1000px; */
 }
 
 h1 {
-  background-color: hotpink;
+  font-family: 'Questa-Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-family: 'Work-Sans-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+p {
+  font-family: 'Work-Sans-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 16px;
+}
+
+a {
+  font-family: 'Work-Sans-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: #333333;
+}
+
+.dark-sticky-header {
+  height: 4rem;
+  background-color: var(--dark-sticky-header);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+
+.line {
+  margin: 1.7rem auto;
+  width: 20rem;
+  height: 0.1rem;
+  background-color: var(--dark-sticky-header);
 }
