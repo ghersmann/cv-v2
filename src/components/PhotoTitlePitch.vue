@@ -7,14 +7,15 @@
     />
     <h1>Sven Gustav Hersmann</h1>
     <p>Frontend Web Developer</p>
-    <section class="pitch">
-      <h2>Positive, friendly <br />and creative</h2>
+    <section class="pitch-grid-column">
+      <h2 class="pitch-text">Positive, friendly <br />and creative</h2>
       <div class="line"></div>
-      <h2>Self-reliant, committed <br />and responsible</h2>
+      <h2 class="pitch-text">Self-reliant, committed <br />and responsible</h2>
       <div class="line"></div>
-      <h2>Quick learner with <br />an eye for details</h2>
+      <h2 class="pitch-text">Quick learner with <br />an eye for details</h2>
     </section>
-    <img class="arrow-1" src="../assets/img/ArrowOne.svg" alt="" />
+    <img class="arrow-1" src="@/assets/img/ArrowOne.svg" alt="" />
+    <img class="arrow-2" src="@/assets/img/ArrowHorizontal.svg" alt="" />
   </article>
 </template>
 
@@ -29,17 +30,12 @@ export default {
   width: 100vw;
 }
 
-.arrow-1 {
-  display: block;
-  margin: 3rem auto;
-}
-
 .gh-photo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 120px;
 }
 
@@ -51,7 +47,7 @@ h1 {
 p {
   margin-top: 0;
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 h2 {

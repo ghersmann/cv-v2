@@ -1,15 +1,59 @@
 <template>
   <article class="project-portfolio">
     <h1>Portfolio</h1>
-    <section class="portfolio-grid">
+    <section class="portfolio-grid-column">
+      <div class="portfolio-item">
+        <div class="herding-cats-imgs">
+          <img
+            src="../assets/img/herding-cats-screen-shot-alltravels.png"
+            alt=""
+            class="herding-cats-img"
+          /><img
+            src="../assets/img/herding-cats-screen-shot-startpage.png"
+            alt=""
+            class="herding-cats-img"
+          /><img
+            src="../assets/img/herding-cats-screen-shot-packlist.png"
+            alt=""
+            class="herding-cats-img"
+          /><img
+            src="../assets/img/herding-cats-screen-shot-tripoverview.png"
+            alt=""
+            class="herding-cats-img"
+          /><img
+            src="../assets/img/herding-cats-screen-shot-notes.png"
+            alt=""
+            class="herding-cats-img"
+          />
+        </div>
+        <h2>Herding Cats Travel App</h2>
+        <a href="https://herdingcats-cbe.netlify.app/"><p>Manage the impossible</p></a>
+      </div>
       <div class="line"></div>
-      <h2>Herding Cats Travel App</h2>
-      <a href="https://herdingcats-cbe.netlify.app/"><p>Manage the impossible</p></a>
-      <div class="line"></div>
-      <h2>Gustav Hersmann Photography</h2>
-      <a href="https://gustavhersmann.com/photo/"><p>My Photography Portfolio</p></a>
+      <div class="portfolio-item">
+        <div class="portfolio-imgs">
+          <img
+            src="@/assets/img/GHFF_Cows_by_Gustav_Hersmann_0029_lowres.jpg"
+            alt=""
+            class="portfolio-img"
+          />
+          <img
+            src="@/assets/img/GHFF_Snowboard_by_Gustav_Hersmann_0029_lowres.jpg"
+            alt=""
+            class="portfolio-img"
+          />
+          <img
+            src="@/assets/img/GHFF_Supersonic_by_Gustav_Hersmann_0029_lowres.jpg"
+            alt=""
+            class="portfolio-img"
+          />
+        </div>
+        <h2>Gustav Hersmann Photography</h2>
+        <a href="https://gustavhersmann.com/photo/"><p>Photography Portfolio</p></a>
+      </div>
     </section>
-    <img class="arrow-1" src="../assets/img/ArrowOne.svg" alt="" />
+    <img class="arrow-1" src="@/assets/img/ArrowOne.svg" alt="Decorative Arrow" />
+    <img class="arrow-2" src="@/assets/img/ArrowHorizontal.svg" alt="Decorative Arrow" />
   </article>
 </template>
 
@@ -20,30 +64,33 @@ export default {
 </script>
 
 <style scoped>
-.photo-title-pitch {
-  width: 100vw;
-}
-
-.arrow-1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4rem;
-  margin-bottom: 0;
-}
-
 h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 p {
   margin-top: 0;
   text-align: center;
-  margin-bottom: 3.5rem;
 }
 
 h2 {
   text-align: center;
+}
+
+.portfolio-item {
+  width: 26rem;
+  margin: 0 auto;
+}
+
+.portfolio-img,
+.herding-cats-img {
+  height: 8rem;
+  margin: 0.3rem;
+}
+.portfolio-imgs,
+.herding-cats-imgs {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
