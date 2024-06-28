@@ -37,15 +37,28 @@ h1 {
 h2 {
   font-family: 'Work-Sans-Light';
   font-style: normal;
-  font-weight: 300;
-  font-size: 1.6rem;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+h3 {
+  font-family: 'Work-Sans-Light';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+h4 {
+  font-family: 'Work-Sans-ExtraLight';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.5rem;
 }
 
 p {
   font-family: 'Work-Sans-Light';
   font-style: normal;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 a {
@@ -66,11 +79,17 @@ a {
   width: 100vw;
 }
 
-.line {
+.line,
+.exp-horizontal-line,
+.portfolio-line {
   margin: 1.7rem auto;
   width: 20rem;
   height: 0.1rem;
   background-color: var(--dark-sticky-header);
+}
+
+.vertical-line {
+  display: none;
 }
 
 .arrow-1 {
@@ -83,14 +102,14 @@ a {
   margin: 3rem auto;
 }
 
-ul {
+ul,
+li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 @media screen and (min-width: 600px) {
-  html {
-    background-color: hotpink;
-  }
   .pitch-grid-column,
   .contact-grid-column {
     display: flex;
@@ -104,12 +123,42 @@ ul {
     align-items: center;
     margin: 0 8vw;
   }
+
+  .experience-grid-column {
+    display: grid;
+    grid-template-columns: 4fr 0.5fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 20px;  Optional: add spacing between the grid items */
+    max-width: 80rem; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the grid in the container */
+  }
+
   .line {
     border-left: 0.1rem solid var(--dark-sticky-header);
     width: 0;
     height: 5rem;
     margin: 0 auto;
   }
+
+  .portfolio-line {
+    border-left: 0.1rem solid var(--dark-sticky-header);
+    width: 0;
+    height: 16rem;
+    margin: 0 auto;
+  }
+
+  .vertical-line {
+    display: block;
+    border-left: 0.1rem solid var(--dark-sticky-header);
+    width: 0;
+    height: 30rem;
+    margin: 3.5rem auto;
+  }
+
+  .exp-horizontal-line {
+    display: none;
+  }
+
   .arrow-1 {
     display: none;
     margin: 3rem auto;
@@ -122,9 +171,6 @@ ul {
 }
 
 @media screen and (min-width: 992px) {
-  html {
-    background-color: dodgerblue;
-  }
   .pitch-grid-column {
     margin: 0 auto;
     max-width: 70rem;

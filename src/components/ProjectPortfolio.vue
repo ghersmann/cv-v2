@@ -5,51 +5,54 @@
       <div class="portfolio-item">
         <div class="herding-cats-imgs">
           <img
-            src="../assets/img/herding-cats-screen-shot-alltravels.png"
-            alt=""
-            class="herding-cats-img"
-          /><img
             src="../assets/img/herding-cats-screen-shot-startpage.png"
-            alt=""
+            alt="Herding Cats Travel App Startpage"
+            class="herding-cats-img"
+          />
+          <img
+            src="../assets/img/herding-cats-screen-shot-alltravels.png"
+            alt="Herding Cats Travel App All Travels"
             class="herding-cats-img"
           /><img
             src="../assets/img/herding-cats-screen-shot-packlist.png"
-            alt=""
+            alt="Herding Cats Travel App Packing List"
             class="herding-cats-img"
           /><img
             src="../assets/img/herding-cats-screen-shot-tripoverview.png"
-            alt=""
+            alt="Herding Cats Travel App Trip Overview"
             class="herding-cats-img"
           /><img
             src="../assets/img/herding-cats-screen-shot-notes.png"
-            alt=""
+            alt="Herding Cats Travel App Trip Notes"
             class="herding-cats-img"
           />
         </div>
         <h2>Herding Cats Travel App</h2>
-        <a href="https://herdingcats-cbe.netlify.app/"><p>Manage the impossible</p></a>
+        <a href="https://herdingcats-cbe.netlify.app/" target="_blank"
+          ><p>Manage the impossible</p></a
+        >
       </div>
-      <div class="line"></div>
+      <div class="portfolio-line"></div>
       <div class="portfolio-item">
         <div class="portfolio-imgs">
           <img
             src="@/assets/img/GHFF_Cows_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt=""
+            alt="Black and White photo of cows in the fog at dusk"
             class="portfolio-img"
           />
           <img
             src="@/assets/img/GHFF_Snowboard_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt=""
+            alt="A Snowboarder makes a turn and blows a big cloud of snow"
             class="portfolio-img"
           />
           <img
             src="@/assets/img/GHFF_Supersonic_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt=""
+            alt="Band photo of The Supersonic"
             class="portfolio-img"
           />
         </div>
         <h2>Gustav Hersmann Photography</h2>
-        <a href="https://gustavhersmann.com/photo/"><p>Photography Portfolio</p></a>
+        <a href="https://gustavhersmann.com/photo/" target="_blank"><p>Photography Portfolio</p></a>
       </div>
     </section>
     <img class="arrow-1" src="@/assets/img/ArrowOne.svg" alt="Decorative Arrow" />
@@ -79,7 +82,7 @@ h2 {
 }
 
 .portfolio-item {
-  width: 26rem;
+  width: 27rem;
   margin: 0 auto;
 }
 
