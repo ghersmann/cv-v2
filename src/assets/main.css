@@ -83,11 +83,16 @@ a {
   margin: 3rem auto;
 }
 
+ul {
+  list-style: none;
+}
+
 @media screen and (min-width: 600px) {
   html {
     background-color: hotpink;
   }
-  .pitch-grid-column {
+  .pitch-grid-column,
+  .contact-grid-column {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -125,7 +130,8 @@ a {
     max-width: 70rem;
   }
 
-  .project-portfolio {
+  .project-portfolio,
+  .contact-component {
     margin: 0 auto;
     max-width: 80rem;
   }
