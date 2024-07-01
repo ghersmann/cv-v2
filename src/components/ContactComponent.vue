@@ -53,6 +53,7 @@ h1 {
 
 a {
   line-height: 3rem;
+  text-decoration: none;
 }
 
 .contact-item {
