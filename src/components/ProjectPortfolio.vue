@@ -55,14 +55,36 @@
         <a href="https://gustavhersmann.com/photo/" target="_blank"><p>Photography Portfolio</p></a>
       </div>
     </section>
-    <img class="arrow-1" src="@/assets/img/ArrowOne.svg" alt="Decorative Arrow" />
-    <img class="arrow-2" src="@/assets/img/ArrowHorizontal.svg" alt="Decorative Arrow" />
+    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
   </article>
 </template>
 
 <script>
+import { useArrowStore } from '@/stores/arrowStore.js'
+import { onMounted, onBeforeUnmount } from 'vue'
+
 export default {
-  name: 'ProjectPortfolio'
+  name: 'ProjectPortfolio',
+  setup() {
+    const arrowStore = useArrowStore()
+
+    const updateArrow = () => {
+      arrowStore.updateArrow()
+    }
+
+    onMounted(() => {
+      updateArrow()
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
+      window.addEventListener('resize', updateArrow)
+    })
+
+    onBeforeUnmount(() => {
+      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
+      window.removeEventListener('resize', updateArrow)
+    })
+
+    return { arrowStore }
+  }
 }
 </script>
 

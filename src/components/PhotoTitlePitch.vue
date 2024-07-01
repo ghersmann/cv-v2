@@ -14,14 +14,37 @@
       <div class="line"></div>
       <h2 class="pitch-text">Quick learner with <br />an eye for details</h2>
     </section>
-    <img class="arrow-1" src="@/assets/img/ArrowOne.svg" alt="" />
-    <img class="arrow-2" src="@/assets/img/ArrowHorizontal.svg" alt="" />
+    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
   </article>
 </template>
 
 <script>
+import { useArrowStore } from '@/stores/arrowStore.js'
+import { onMounted, onBeforeUnmount } from 'vue'
+
 export default {
-  name: 'PhotoTitlePitch'
+  name: 'PhotoTitlePitch',
+
+  setup() {
+    const arrowStore = useArrowStore()
+
+    const updateArrow = () => {
+      arrowStore.updateArrow()
+    }
+
+    onMounted(() => {
+      updateArrow()
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
+      window.addEventListener('resize', updateArrow)
+    })
+
+    onBeforeUnmount(() => {
+      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
+      window.removeEventListener('resize', updateArrow)
+    })
+
+    return { arrowStore }
+  }
 }
 </script>
 

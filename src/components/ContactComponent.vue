@@ -12,13 +12,36 @@
         <li><a href="www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
       </ul>
     </section>
-    <img class="end-arrow" src="@/assets/img/ArrowHorizontal.svg" alt="Decorative Arrow" />
+    <img :src="currentImage" alt="Decorative Arrow" class="end-arrow" />
   </article>
 </template>
 
 <script>
+import arrowBlack from '@/assets/img/ArrowHorizontal.svg'
+import arrowWhite from '@/assets/img/ArrowHorizontal-white.svg'
+
 export default {
-  name: 'ContactComponent'
+  name: 'ContactComponent',
+  data() {
+    return {
+      currentImage: ''
+    }
+  },
+  created() {
+    this.updateImage()
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.updateImage)
+  },
+  methods: {
+    updateImage() {
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+      this.currentImage = isDarkMode ? arrowWhite : arrowBlack
+    }
+  },
+  beforeUnmount() {
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .removeEventListener('change', this.updateImage)
+  }
 }
 </script>
 

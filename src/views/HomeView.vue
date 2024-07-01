@@ -1,7 +1,4 @@
 <template>
-  <!--   <header class="dark-sticky-header">
-    <DarkStickyHeader />
-  </header> -->
   <main>
     <PhotoTitlePitch />
     <ProjectPortfolio />
