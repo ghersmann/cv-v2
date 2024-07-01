@@ -104,6 +104,22 @@ li {
   list-style: none;
 }
 
+.skills-grid-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  width: 30rem;
+  margin: 0 auto;
+  align-items: baseline;
+}
+
+.skill-item {
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+}
+
 @media screen and (min-width: 600px) {
   .pitch-grid-column,
   .contact-grid-column {
@@ -152,9 +168,28 @@ li {
   .exp-horizontal-line {
     display: none;
   }
+
+  .skills-grid-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 95vw;
+    margin: 0 auto;
+    align-items: baseline;
+  }
+
+  .skill-item {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  html {
+    font-size: 11px;
+  }
+
   .pitch-grid-column {
     margin: 0 auto;
     max-width: 70rem;
@@ -167,6 +202,13 @@ li {
   }
   .portfolio-grid-column {
     margin: 0 2vw;
+  }
+
+  .skills-grid-column {
+    display: flex;
+    width: 80rem;
+    margin: 0 auto;
+    align-items: baseline;
   }
 }
 
