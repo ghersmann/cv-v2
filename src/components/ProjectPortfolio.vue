@@ -52,7 +52,9 @@
           />
         </div>
         <h2>Gustav Hersmann Photography</h2>
-        <a href="https://gustavhersmann.com/photo/" target="_blank"><p>Photography Portfolio</p></a>
+        <router-link class="routerlink" :to="{ path: '/photo' }"
+          ><p>Photography Portfolio</p></router-link
+        >
       </div>
     </section>
     <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
@@ -101,6 +103,11 @@ p {
 
 h2 {
   text-align: center;
+}
+
+.routerlink {
+  display: block;
+  margin: 0 auto;
 }
 
 .portfolio-item {

@@ -66,9 +66,7 @@
           <li>
             <p>
               Portfolio:
-              <a href="https://gustavhersmann.com/photo" target="_blank"
-                >gustavhersmann.com/photo</a
-              >
+              <router-link :to="{ path: '/photo' }">gustavhersmann.com/photo</router-link>
             </p>
           </li>
         </ul>
