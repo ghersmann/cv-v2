@@ -61,7 +61,8 @@ p {
   line-height: 1.7rem;
 }
 
-a {
+a,
+.routerlink {
   font-family: 'Work-Sans-Light';
   font-style: normal;
   font-weight: 300;
