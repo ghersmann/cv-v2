@@ -28,8 +28,8 @@
           />
         </div>
         <h2>Herding Cats Travel App</h2>
-        <a href="https://herdingcats-cbe.netlify.app/" target="_blank"
-          ><p>Manage the impossible</p></a
+        <a href="https://herdingcats-cbe.netlify.app/" class="routerlink" target="_blank"
+          >Manage the impossible</a
         >
       </div>
       <div class="portfolio-line"></div>
@@ -52,9 +52,7 @@
           />
         </div>
         <h2>Gustav Hersmann Photography</h2>
-        <router-link class="routerlink" :to="{ path: '/photo' }"
-          ><p>Photography Portfolio</p></router-link
-        >
+        <router-link class="routerlink" :to="{ path: '/photo' }">Photography Portfolio</router-link>
       </div>
     </section>
     <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
@@ -106,6 +104,7 @@ h2 {
 }
 
 .routerlink {
+  width: fit-content;
   display: block;
   margin: 0 auto;
 }

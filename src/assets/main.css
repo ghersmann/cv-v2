@@ -121,6 +121,14 @@ li {
   text-align: center;
 }
 
+.skill-item-node {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.skill-item-npm {
+  grid-area: 3/ 3/ 4 / 4;
+}
+
 @media screen and (min-width: 600px) {
   .pitch-grid-column,
   .contact-grid-column {
@@ -184,6 +192,11 @@ li {
     padding: 1rem;
     text-align: center;
   }
+
+  .skill-item-node,
+  .skill-item-npm {
+    grid-area: unset;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -223,7 +236,8 @@ li {
   h3,
   h4,
   p,
-  a {
+  a,
+  .routerlink {
     color: white;
   }
 
