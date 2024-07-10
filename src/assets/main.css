@@ -129,8 +129,20 @@ li {
   grid-area: 3/ 3/ 4 / 4;
 }
 
+
+.photo-title-pitch {
+    margin: 0 10vw;
+}
+
+
 @media screen and (min-width: 600px) {
-  .pitch-grid-column,
+  
+    .pitch-grid-column {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
   .contact-grid-column {
     display: flex;
     justify-content: space-around;
@@ -140,7 +152,7 @@ li {
   .portfolio-grid-column {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: top;
     margin: 0 8vw;
   }
 
@@ -162,7 +174,7 @@ li {
   .portfolio-line {
     border-left: 0.1rem solid var(--dark-sticky-header);
     width: 0;
-    height: 16rem;
+    height: 32rem;
     margin: 0 auto;
   }
 
@@ -208,6 +220,11 @@ li {
     margin: 0 auto;
     max-width: 70rem;
   }
+
+.photo-title-pitch {
+  margin: 0 auto;
+  max-width: 70rem;
+}
 
   .project-portfolio,
   .contact-component {
