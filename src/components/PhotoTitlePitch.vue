@@ -3,10 +3,10 @@
     <img
       class="gh-photo"
       src="../assets/img/bewerbungsbild-sven-gustav-hersmann-0003-medres.jpg"
-      alt="Photo Sven Gustav Hersmann"
+      alt="Photo Gustav Hersmann"
     />
-    <h1>Sven Gustav Hersmann</h1>
-    <p>Frontend Web Developer</p>
+    <h1>Gustav Hersmann</h1>
+    <p class="pitch">Frontend Web Developer with a strong background in HTML, CSS, JavaScript, and Vue.js. Proven track record in developing user-friendly web applications and dynamic, responsive websites. Passionate about creating visually appealing and accessible digital experiences. Fluent in Swedish, German, and English with a solid foundation in project management and graphic design.</p>
     <section class="pitch-grid-column">
       <h2 class="pitch-text">Positive, friendly <br />and creative</h2>
       <div class="line"></div>
@@ -49,9 +49,6 @@ export default {
 </script>
 
 <style scoped>
-.photo-title-pitch {
-  width: 100vw;
-}
 
 .gh-photo {
   display: block;
@@ -62,15 +59,17 @@ export default {
   width: 120px;
 }
 
+.pitch {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  max-width: 70rem;
+  
+  }
+
 h1 {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-p {
-  margin-top: 0;
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 h2 {

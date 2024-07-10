@@ -28,8 +28,12 @@
           />
         </div>
         <h2>Herding Cats Travel App</h2>
+          <p>- A comprehensive travel planning application developed using Vue.js.</p>
+         <p>- Custom graphics and user interface designed in Figma.</p>
+         <p>- Features include itinerary sharing, flight information, hotel bookings, meeting points, activities, and contact information management for small travel groups.
+         </p>
         <a href="https://herdingcats-cbe.netlify.app/" class="routerlink" target="_blank"
-          >Manage the impossible</a
+          >herdingcats-cbe.netlify.app</a
         >
       </div>
       <div class="portfolio-line"></div>
@@ -52,6 +56,7 @@
           />
         </div>
         <h2>Gustav Hersmann Photography</h2>
+        <p>Current project in the works. Developing a nice photo portfolio for my former business as a Professional Photographer. Mostly to stay updated on programming and learn new things while looking for a job.</p>
         <router-link class="routerlink" :to="{ path: '/photo' }">Photography Portfolio</router-link>
       </div>
     </section>
@@ -101,6 +106,11 @@ p {
 
 h2 {
   text-align: center;
+}
+
+
+p {
+  text-align: left;
 }
 
 .routerlink {
