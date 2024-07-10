@@ -9,8 +9,23 @@
       <div class="line"></div>
       <ul class="contact-item">
         <li><a href="https://github.com/ghersmann">github.com/ghersmann</a></li>
-        <li><a href="www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
+        <li><a href="https://www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
       </ul>
+    </section>
+    <img :src="currentImage" alt="Decorative Arrow" class="end-arrow" />
+  </article>
+
+  <article class="contact-component">
+    <h1>Downloads</h1>
+    <section class="contact-grid-column">
+      <ul class="contact-item">
+        <li><a href="/cv/cv-gustav-hersmann-english.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
+        <li><a href="/cv/cv-gustav-hersmann-english.pdf" target="_blank">Resumé in English.pdf</a></li>
+      </ul>
+      <div class="line"></div>
+      <ul class="contact-item">
+                      <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
+        <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank">Lebenslauf auf Deutsch.pdf</a></li></ul>
     </section>
     <img :src="currentImage" alt="Decorative Arrow" class="end-arrow" />
   </article>
@@ -46,6 +61,10 @@ export default {
 </script>
 
 <style scoped>
+.cv-img {
+border: 1px solid black;
+}
+
 h1 {
   text-align: center;
   margin-bottom: 2rem;
