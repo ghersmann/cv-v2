@@ -6,7 +6,13 @@
       alt="Photo Gustav Hersmann"
     />
     <h1>Gustav Hersmann</h1>
-    <p class="pitch">Frontend Web Developer with a strong background in HTML, CSS, JavaScript, and Vue.js. Proven track record in developing user-friendly web applications and dynamic, responsive websites. Passionate about creating visually appealing and accessible digital experiences. Fluent in Swedish, German, and English with a solid foundation in project management and graphic design.</p>
+    <p class="pitch">
+      Frontend Web Developer with a strong background in HTML, CSS, JavaScript, and Vue.js. Proven
+      track record in developing user-friendly web applications and dynamic, responsive websites.
+      Passionate about creating visually appealing and accessible digital experiences. Fluent in
+      Swedish, German, and English with a solid foundation in project management, photography and
+      graphic design.
+    </p>
     <section class="pitch-grid-column">
       <h2 class="pitch-text">Positive, friendly <br />and creative</h2>
       <div class="line"></div>
@@ -49,7 +55,6 @@ export default {
 </script>
 
 <style scoped>
-
 .gh-photo {
   display: block;
   margin-left: auto;
@@ -64,8 +69,7 @@ export default {
   margin-top: 2rem;
   margin-bottom: 4rem;
   max-width: 70rem;
-  
-  }
+}
 
 h1 {
   text-align: center;
