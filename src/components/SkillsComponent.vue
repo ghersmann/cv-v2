@@ -35,6 +35,10 @@
           <img src="@/assets/img/logos/Git-logo.svg" alt="Git Logotype" height="50px" /><br />
           <h3>Git</h3>
         </section>
+        <section class="skill-item">
+          <img src="@/assets/img/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
+          <h3>Figma</h3>
+        </section>
         <section class="skill-item skill-item-node">
           <img
             src="@/assets/img/logos/Node.js_logo.svg"

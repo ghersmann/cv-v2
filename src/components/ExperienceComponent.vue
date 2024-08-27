@@ -93,6 +93,12 @@
               manuscripts.
             </p>
           </li>
+          <li>
+            <p>Head of photography and image archiving for the project "Röster i Nyköping".</p>
+          </li>
+          <li>
+            <p>Lead photographer for the documentation of the museum collection.</p>
+          </li>
         </ul>
         <div class="exp-horizontal-line"></div>
       </section>
