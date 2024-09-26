@@ -1,0 +1,1 @@
+<template>PostersGwfView</template>

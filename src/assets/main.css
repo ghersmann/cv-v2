@@ -129,31 +129,22 @@ li {
   grid-area: 3/ 3/ 4 / 4;
 }
 
-
 .photo-title-pitch {
-    margin: 0 10vw;
+  margin: 0 10vw;
 }
 
-
 @media screen and (min-width: 600px) {
-  
-    .pitch-grid-column {
+  .pitch-grid-column {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  
+
   .contact-grid-column {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0 10vw;
-  }
-  .portfolio-grid-column {
-    display: flex;
-    justify-content: space-around;
-    align-items: top;
-    margin: 0 8vw;
   }
 
   .experience-grid-column {
@@ -175,6 +166,14 @@ li {
     border-left: 0.1rem solid var(--dark-sticky-header);
     width: 0;
     height: 32rem;
+    margin: 0 auto;
+  }
+
+  .portfolio-grid-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
 
@@ -221,10 +220,10 @@ li {
     max-width: 70rem;
   }
 
-.photo-title-pitch {
-  margin: 0 auto;
-  max-width: 70rem;
-}
+  .photo-title-pitch {
+    margin: 0 auto;
+    max-width: 70rem;
+  }
 
   .project-portfolio,
   .contact-component {

@@ -16,10 +16,10 @@
           <li>
             <p>
               Final Project Travel Planning App: <br />
-              <a href="https://herdingcats-cbe.netlify.app/" target="_blank">Herding Cats</a>
+              <a href="https://herding-cats.vercel.app/" target="_blank">Herding Cats</a>
               <br />Made with Vue.JS.
               <br />
-              Graphic Design by me, designed in Figma.
+              Graphic Design by me using Figma.
             </p>
           </li>
         </ul>
