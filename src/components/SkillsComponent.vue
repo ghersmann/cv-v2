@@ -36,7 +36,7 @@
           <h3>Git</h3>
         </section>
         <section class="skill-item">
-          <img src="@/assets/img/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
+          <img src="@/assets/img/logos/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
           <h3>Figma</h3>
         </section>
         <section class="skill-item skill-item-node">

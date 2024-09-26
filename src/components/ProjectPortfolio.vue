@@ -2,62 +2,26 @@
   <article class="project-portfolio">
     <h1>Portfolio</h1>
     <section class="portfolio-grid-column">
-      <div class="portfolio-item">
-        <div class="herding-cats-imgs">
-          <img
-            src="../assets/img/herding-cats-screen-shot-startpage.png"
-            alt="Herding Cats Travel App Startpage"
-            class="herding-cats-img"
-          />
-          <img
-            src="../assets/img/herding-cats-screen-shot-alltravels.png"
-            alt="Herding Cats Travel App All Travels"
-            class="herding-cats-img"
-          /><img
-            src="../assets/img/herding-cats-screen-shot-packlist.png"
-            alt="Herding Cats Travel App Packing List"
-            class="herding-cats-img"
-          /><img
-            src="../assets/img/herding-cats-screen-shot-tripoverview.png"
-            alt="Herding Cats Travel App Trip Overview"
-            class="herding-cats-img"
-          /><img
-            src="../assets/img/herding-cats-screen-shot-notes.png"
-            alt="Herding Cats Travel App Trip Notes"
-            class="herding-cats-img"
-          />
-        </div>
-        <h2>Herding Cats Travel App</h2>
-          <p>- A comprehensive travel planning application developed using Vue.js.</p>
-         <p>- Custom graphics and user interface designed in Figma.</p>
-         <p>- Features include itinerary sharing, flight information, hotel bookings, meeting points, activities, and contact information management for small travel groups.
-         </p>
-        <a href="https://herdingcats-cbe.netlify.app/" class="routerlink" target="_blank"
-          >herdingcats-cbe.netlify.app</a
-        >
-      </div>
-      <div class="portfolio-line"></div>
-      <div class="portfolio-item">
+      <div v-for="(project, index) in portfolioProjects" :key="index" class="portfolio-item">
         <div class="portfolio-imgs">
           <img
-            src="@/assets/img/GHFF_Cows_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt="Black and White photo of cows in the fog at dusk"
-            class="portfolio-img"
-          />
-          <img
-            src="@/assets/img/GHFF_Snowboard_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt="A Snowboarder makes a turn and blows a big cloud of snow"
-            class="portfolio-img"
-          />
-          <img
-            src="@/assets/img/GHFF_Supersonic_by_Gustav_Hersmann_0029_lowres.jpg"
-            alt="Band photo of The Supersonic"
+            v-for="(image, imgIndex) in project.images"
+            :key="imgIndex"
+            :src="image.src"
+            :alt="image.alt"
             class="portfolio-img"
           />
         </div>
-        <h2>Gustav Hersmann Photography</h2>
-        <p>Current project in the works. Developing a nice photo portfolio for my former business as a Professional Photographer. Mostly to stay updated on programming and learn new things while looking for a job.</p>
-        <router-link class="routerlink" :to="{ path: '/photo' }">Photography Portfolio</router-link>
+        <h2>{{ project.title }}</h2>
+        <p v-for="(desc, descIndex) in project.description" :key="descIndex">
+          {{ desc }}
+        </p>
+        <a v-if="project.link" :href="project.link" class="routerlink" target="_blank">
+          {{ project.linkText }}
+        </a>
+        <router-link v-else :to="project.routerLink" class="routerlink">
+          {{ project.routerLinkText }}
+        </router-link>
       </div>
     </section>
     <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
@@ -67,11 +31,13 @@
 <script>
 import { useArrowStore } from '@/stores/arrowStore.js'
 import { onMounted, onBeforeUnmount } from 'vue'
+import { usePortfolioStore } from '@/stores/portfolioStore.js'
 
 export default {
   name: 'ProjectPortfolio',
   setup() {
     const arrowStore = useArrowStore()
+    const portfolioStore = usePortfolioStore()
 
     const updateArrow = () => {
       arrowStore.updateArrow()
@@ -88,7 +54,10 @@ export default {
       window.removeEventListener('resize', updateArrow)
     })
 
-    return { arrowStore }
+    return {
+      arrowStore,
+      portfolioProjects: portfolioStore.getProjects
+    }
   }
 }
 </script>
@@ -108,11 +77,6 @@ h2 {
   text-align: center;
 }
 
-
-p {
-  text-align: left;
-}
-
 .routerlink {
   width: fit-content;
   display: block;
@@ -121,16 +85,16 @@ p {
 
 .portfolio-item {
   width: 27rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
 }
 
-.portfolio-img,
-.herding-cats-img {
+.portfolio-img {
   height: 8rem;
   margin: 0.3rem;
 }
-.portfolio-imgs,
-.herding-cats-imgs {
+.portfolio-imgs {
   display: flex;
   justify-content: space-between;
 }
