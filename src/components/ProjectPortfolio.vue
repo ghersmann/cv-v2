@@ -16,10 +16,7 @@
         <p v-for="(desc, descIndex) in project.description" :key="descIndex">
           {{ desc }}
         </p>
-        <a v-if="project.link" :href="project.link" class="routerlink" target="_blank">
-          {{ project.linkText }}
-        </a>
-        <router-link v-else :to="project.routerLink" class="routerlink">
+        <router-link :to="{ name: 'ProjectDetail', params: { id: project.id } }" class="routerlink">
           {{ project.routerLinkText }}
         </router-link>
       </div>
