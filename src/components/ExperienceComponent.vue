@@ -66,7 +66,9 @@
           <li>
             <p>
               Portfolio:
-              <router-link :to="{ path: '/photo' }">gustavhersmann.com/photo</router-link>
+              <router-link :to="{ name: 'ProjectDetail', params: { id: '002' } }"
+                >gustavhersmann.com/photo</router-link
+              >
             </p>
           </li>
         </ul>

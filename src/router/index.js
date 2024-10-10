@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import PhotographyView from '@/views/PhotographyView.vue'
-import PostersGwfView from '@/views/PostersGwfView.vue'
-import RedLeafCameras from '@/views/RedLeafCameras.vue'
+import ProjectDetail from '@/views/ProjectDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,19 +11,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/photo',
-      name: 'photo',
-      component: PhotographyView
-    },
-    {
-      path: '/posters-gwf',
-      name: 'postersgwf',
-      component: PostersGwfView
-    },
-    {
-      path: '/red-leaf-cameras',
-      name: 'redleafcameras',
-      component: RedLeafCameras
+      path: '/portfolio/:id',
+      name: 'ProjectDetail',
+      component: ProjectDetail
     }
   ]
 })
