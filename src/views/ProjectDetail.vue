@@ -1,32 +1,27 @@
 <template>
   <article class="project-portfolio" v-if="project">
     <h1>{{ project.title }}</h1>
-    <section class="portfolio-grid-column">
-      <div class="portfolio-imgs">
-        <!-- Loop through each image and display the image and description -->
-        <div
-          v-for="(image, imgIndex) in project.images"
-          :key="imgIndex"
-          class="portfolio-image-description"
-        >
-          <!-- Image with click event to open modal -->
-          <img :src="image.src" :alt="image.alt" class="portfolio-img" @click="openModal(image)" />
+    <section class="project-details">
+      <div v-if="project.details" v-html="project.details" class="project-description"></div>
+      <p v-else class="project-description">{{ project.description[0] }}</p>
+      <div v-for="(image, imgIndex) in project.images" :key="imgIndex" class="project-item">
+        <img :src="image.src" :alt="image.alt" class="project-img" @click="openModal(image)" />
+        <div class="project-image-description">
+          <h2>{{ image.alt }}</h2>
           <p>{{ image.description }}</p>
         </div>
-
-        <!-- Link to external project (if available) -->
-        <a v-if="project.link" :href="project.link" class="projectlink routerlink" target="_blank">
-          {{ project.linkText }}
-        </a>
-        <router-link :to="'/'" class="routerlink">
-          <p>Back</p>
-        </router-link>
       </div>
+      <h2 class="projectlink routerlink" v-if="project.link">Try it out:</h2>
+      <a v-if="project.link" :href="project.link" class="projectlink routerlink" target="_blank">
+        {{ project.linkText }}
+      </a>
+      <router-link :to="'/'" class="routerlink">
+        <p>Back</p>
+      </router-link>
     </section>
 
     <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
 
-    <!-- Modal for large image view -->
     <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
       <div class="modal-content" @click.stop>
         <span class="close-btn" @click="closeModal">&times;</span>
@@ -51,13 +46,10 @@ export default {
     const portfolioStore = usePortfolioStore()
     const route = useRoute()
 
-    // Extract the project id from the route
     const projectId = route.params.id
 
-    // Find the project by id
     const project = portfolioStore.getProjects.find((p) => p.id === projectId)
 
-    // Modal logic
     const isModalOpen = ref(false)
     const selectedImage = ref(null)
 
@@ -88,7 +80,7 @@ export default {
 
     return {
       arrowStore,
-      project, // Return the selected project
+      project,
       isModalOpen,
       selectedImage,
       openModal,
@@ -104,13 +96,33 @@ h1 {
   margin-bottom: 2rem;
 }
 
-p {
-  margin-top: 0;
-  text-align: center;
+h2 {
+  font-size: 1.6rem;
 }
 
-h2 {
-  text-align: center;
+.project-portfolio {
+  max-width: 60rem;
+}
+
+.project-description {
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-item {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.project-image-description {
+  margin-top: auto;
+}
+
+.project-img {
+  max-height: 40rem;
+  max-width: 40rem;
+  margin-right: 2rem;
 }
 
 .routerlink {
@@ -121,34 +133,6 @@ h2 {
 
 .projectlink {
   margin-bottom: 2rem;
-}
-
-.portfolio-item {
-  width: 27rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
-}
-
-.portfolio-imgs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.portfolio-image-description {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.portfolio-img {
-  height: 8rem;
-  margin-right: 1rem;
-}
-
-.portfolio-image-description p {
-  margin: 0;
 }
 
 /* Modal overlay */
