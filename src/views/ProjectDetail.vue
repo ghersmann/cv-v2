@@ -100,31 +100,6 @@ h2 {
   font-size: 1.6rem;
 }
 
-.project-portfolio {
-  max-width: 60rem;
-}
-
-.project-description {
-  margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project-item {
-  display: flex;
-  margin-bottom: 4rem;
-}
-
-.project-image-description {
-  margin-top: auto;
-}
-
-.project-img {
-  max-height: 40rem;
-  max-width: 40rem;
-  margin-right: 2rem;
-}
-
 .routerlink {
   width: fit-content;
   display: block;
