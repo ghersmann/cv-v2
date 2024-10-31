@@ -133,7 +133,59 @@ li {
   margin: 0 10vw;
 }
 
+.project-portfolio {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.project-description {
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-item {
+  display: Block;
+  margin-bottom: 4rem;
+}
+
+.project-image-description {
+  margin-top: auto;
+}
+
+.project-img {
+  max-height: 30rem;
+  max-width: 30rem;
+  margin-right: 2rem;
+}
+
 @media screen and (min-width: 600px) {
+  .project-portfolio {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  .project-description {
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-item {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+
+  .project-image-description {
+    margin-top: auto;
+  }
+
+  .project-img {
+    max-height: 40rem;
+    max-width: 40rem;
+    margin-right: 2rem;
+  }
+
   .pitch-grid-column {
     display: flex;
     justify-content: space-around;

@@ -100,31 +100,6 @@ h2 {
   font-size: 1.6rem;
 }
 
-.project-portfolio {
-  max-width: 60rem;
-}
-
-.project-description {
-  margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project-item {
-  display: flex;
-  margin-bottom: 4rem;
-}
-
-.project-image-description {
-  margin-top: auto;
-}
-
-.project-img {
-  max-height: 40rem;
-  max-width: 40rem;
-  margin-right: 2rem;
-}
-
 .routerlink {
   width: fit-content;
   display: block;
@@ -135,26 +110,23 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Transparent dark background */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Modal content */
 .modal-content {
   position: relative;
   background-color: white;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 2.5rem;
   max-width: 80%;
   max-height: 80%;
   display: flex;
@@ -163,18 +135,16 @@ h2 {
   align-items: center;
 }
 
-/* Modal image */
 .modal-img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 1rem;
+  right: 1rem;
   font-size: 2rem;
   color: #333;
   cursor: pointer;
