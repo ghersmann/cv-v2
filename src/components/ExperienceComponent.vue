@@ -16,7 +16,7 @@
           <li>
             <p>
               Final Project Travel Planning App: <br />
-              <a href="https://herding-cats.onrender.app/" target="_blank">Herding Cats</a>
+              <a href="https://herding-cats.onrender.com/" target="_blank">Herding Cats</a>
               <br />Made with Vue.JS.
               <br />
               Graphic Design by me using Figma.

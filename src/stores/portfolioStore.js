@@ -67,8 +67,8 @@ export const usePortfolioStore = defineStore('portfolio', {
               'Make notes for your trip for yourself or to share with others. Credits to officeipsum.com for the poetry here.'
           }
         ],
-        link: 'https://herding-cats.onrender.app/',
-        linkText: 'herding-cats.onrender.app',
+        link: 'https://herding-cats.onrender.com/',
+        linkText: 'herding-cats.onrender.com',
         routerLinkText: 'View Details'
       },
       {
