@@ -1,8 +1,8 @@
 <template>
   <main>
     <PhotoTitlePitch />
-    <ProjectPortfolio />
     <ExperienceComponent />
+    <ProjectPortfolio />
     <SkillsComponent />
   </main>
   <footer>

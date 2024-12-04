@@ -6,7 +6,6 @@
         <li><a href="mailto:gustav@gustavhersmann.com">gustav@gustavhersmann.com</a></li>
         <li><a href="tel:+4915221477147">+49 (0) 1522 1477147</a></li>
       </ul>
-      <div class="line"></div>
       <ul class="contact-item">
         <li><a href="https://github.com/ghersmann">github.com/ghersmann</a></li>
         <li><a href="https://www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
@@ -22,7 +21,6 @@
         <li><a href="/cv/cv-gustav-hersmann-english.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
         <li><a href="/cv/cv-gustav-hersmann-english.pdf" target="_blank">Resumé in English.pdf</a></li>
       </ul>
-      <div class="line"></div>
       <ul class="contact-item">
                       <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
         <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank">Lebenslauf auf Deutsch.pdf</a></li></ul>

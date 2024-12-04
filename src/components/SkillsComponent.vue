@@ -39,6 +39,14 @@
           <img src="@/assets/img/logos/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
           <h3>Figma</h3>
         </section>
+        <section class="skill-item">
+          <img src="@/assets/img/logos/MongoDB_Fores-Green.svg" alt="MongoDB Logotype" width="130px" /><br />
+          <h3>MongoDB</h3>
+        </section>
+        <section class="skill-item">
+          <img src="@/assets/img/logos/aws-logo.png" alt="AWS Logotype" height="50px" /><br />
+          <h3>AWS</h3>
+        </section>
         <section class="skill-item skill-item-node">
           <img
             src="@/assets/img/logos/Node.js_logo.svg"

@@ -21,38 +21,18 @@
         </router-link>
       </div>
     </section>
-    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
   </article>
 </template>
 
 <script>
-import { useArrowStore } from '@/stores/arrowStore.js'
-import { onMounted, onBeforeUnmount } from 'vue'
 import { usePortfolioStore } from '@/stores/portfolioStore.js'
 
 export default {
   name: 'ProjectPortfolio',
   setup() {
-    const arrowStore = useArrowStore()
     const portfolioStore = usePortfolioStore()
 
-    const updateArrow = () => {
-      arrowStore.updateArrow()
-    }
-
-    onMounted(() => {
-      updateArrow()
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
-      window.addEventListener('resize', updateArrow)
-    })
-
-    onBeforeUnmount(() => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
-      window.removeEventListener('resize', updateArrow)
-    })
-
-    return {
-      arrowStore,
+       return {
       portfolioProjects: portfolioStore.getProjects
     }
   }
@@ -61,7 +41,6 @@ export default {
 
 <style scoped>
 h1 {
-  text-align: center;
   margin-bottom: 2rem;
 }
 
