@@ -25,6 +25,16 @@
 
 html {
   font-size: 10px;
+  background-color: white
+}
+
+body {
+  background-color: rgb(252, 250, 247);
+  width: 80vw;
+  max-width: 950px;
+  margin: 1rem auto;
+  box-shadow: 0px 5px 5px 5px rgb(247, 246, 246);
+  padding: 3rem;
 }
 
 h1 {
@@ -129,12 +139,7 @@ li {
   grid-area: 3/ 3/ 4 / 4;
 }
 
-.photo-title-pitch {
-  margin: 0 10vw;
-}
-
 .project-portfolio {
-  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -186,27 +191,6 @@ li {
     margin-right: 2rem;
   }
 
-  .pitch-grid-column {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .contact-grid-column {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 10vw;
-  }
-
-  .experience-grid-column {
-    display: grid;
-    grid-template-columns: 4fr 0.5fr 4fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: 80rem;
-    margin: 0 auto;
-  }
-
   .line {
     border-left: 0.1rem solid var(--dark-sticky-header);
     width: 0;
@@ -244,8 +228,8 @@ li {
   .skills-grid-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 95vw;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 60rem;
     margin: 0 auto;
     align-items: baseline;
   }
@@ -260,6 +244,12 @@ li {
   .skill-item-npm {
     grid-area: unset;
   }
+
+  .contact-grid-column {
+    display: flex; 
+    max-width: 60rem;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -267,30 +257,12 @@ li {
     font-size: 11px;
   }
 
-  .pitch-grid-column {
-    margin: 0 auto;
-    max-width: 70rem;
-  }
-
-  .photo-title-pitch {
-    margin: 0 auto;
-    max-width: 70rem;
-  }
-
-  .project-portfolio,
-  .contact-component {
+  .project-portfolio {
     margin: 0 auto;
     max-width: 80rem;
   }
   .portfolio-grid-column {
     margin: 0 2vw;
-  }
-
-  .skills-grid-column {
-    display: flex;
-    width: 80rem;
-    margin: 0 auto;
-    align-items: baseline;
   }
 }
 

@@ -5,78 +5,60 @@
       src="../assets/img/bewerbungsbild-sven-gustav-hersmann-0003-medres.jpg"
       alt="Photo Gustav Hersmann"
     />
-    <h1>Gustav Hersmann</h1>
-    <p class="pitch">
-      Frontend Web Developer with a strong background in HTML, CSS, JavaScript, and Vue.js. Proven
-      track record in developing user-friendly web applications and dynamic, responsive websites.
-      Passionate about creating visually appealing and accessible digital experiences. Fluent in
-      Swedish, German, and English with a solid foundation in project management, photography and
-      graphic design.
-    </p>
-    <section class="pitch-grid-column">
-      <h2 class="pitch-text">Positive, friendly <br />and creative</h2>
-      <div class="line"></div>
-      <h2 class="pitch-text">Self-reliant, committed <br />and responsible</h2>
-      <div class="line"></div>
-      <h2 class="pitch-text">Quick learner with <br />an eye for details</h2>
-    </section>
-    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
+    <ul class="name-title">
+      <h1>Gustav Hersmann</h1>
+      <li class="pitch-text">Frontend Developer</li>
+      <li class="pitch-text">Web Designer</li>
+      </ul>
+    <ul class="contact-header">
+    <h2>Contact</h2>
+      <li><a class="pitch-text" href="mailto:gustav@gustavhersmann.com">gustav@gustavhersmann.com</a></li>
+      <li><a class="pitch-text" href="tel:+4915221477147">+49 (0) 1522 1477147</a></li>
+      <li><a class="pitch-text" href="https://github.com/ghersmann">github.com/ghersmann</a></li>
+      <li><a class="pitch-text" href="https://www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
+    </ul>
   </article>
 </template>
 
-<script>
-import { useArrowStore } from '@/stores/arrowStore.js'
-import { onMounted, onBeforeUnmount } from 'vue'
-
-export default {
-  name: 'PhotoTitlePitch',
-
-  setup() {
-    const arrowStore = useArrowStore()
-
-    const updateArrow = () => {
-      arrowStore.updateArrow()
-    }
-
-    onMounted(() => {
-      updateArrow()
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
-      window.addEventListener('resize', updateArrow)
-    })
-
-    onBeforeUnmount(() => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
-      window.removeEventListener('resize', updateArrow)
-    })
-
-    return { arrowStore }
-  }
-}
-</script>
-
 <style scoped>
+.photo-title-pitch {
+display: flex;
+align-items: flex-start;
+width: 100%;
+margin: 0 auto;
+}
+
 .gh-photo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-left: 0;
   width: 120px;
 }
 
-.pitch {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  max-width: 70rem;
+.name-title {
+  margin-top: 0;
+  margin-left: 2rem;
+  margin-right: auto;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 1rem;
+.pitch-text {
+  font-family: 'Work-Sans-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-decoration: none;
 }
 
-h2 {
-  text-align: center;
+.contact-header {
+text-align: right;
+margin-right: 0;
+margin-top: auto;
+padding-right: 0.4rem;
+border-right: 0.2rem solid var(--dark-sticky-header);
 }
+
+h1, h2 {
+  margin: 0;
+}
+
+
 </style>
