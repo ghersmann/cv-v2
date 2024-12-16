@@ -11,7 +11,6 @@
         <li><a href="https://www.linkedin.com/in/gustavhersmann">linkedin.com/in/gustavhersmann</a></li>
       </ul>
     </section>
-    <img :src="currentImage" alt="Decorative Arrow" class="end-arrow" />
   </article>
 
   <article class="contact-component">
@@ -22,39 +21,16 @@
         <li><a href="/cv/cv-gustav-hersmann-english.pdf" target="_blank">Resumé in English.pdf</a></li>
       </ul>
       <ul class="contact-item">
-                      <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
+        <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank"><img class="cv-img" src="/cv/cv-gustav-hersmann-english-thumbnail.png" width="100px"></a></li>
         <li><a href="/cv/lebenslauf-gustav-hersmann-deutsch.pdf" target="_blank">Lebenslauf auf Deutsch.pdf</a></li></ul>
     </section>
-    <img :src="currentImage" alt="Decorative Arrow" class="end-arrow" />
   </article>
 </template>
 
 <script>
-import arrowBlack from '@/assets/img/ArrowHorizontal.svg'
-import arrowWhite from '@/assets/img/ArrowHorizontal-white.svg'
 
 export default {
   name: 'ContactComponent',
-  data() {
-    return {
-      currentImage: ''
-    }
-  },
-  created() {
-    this.updateImage()
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.updateImage)
-  },
-  methods: {
-    updateImage() {
-      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-      this.currentImage = isDarkMode ? arrowWhite : arrowBlack
-    }
-  },
-  beforeUnmount() {
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .removeEventListener('change', this.updateImage)
-  }
 }
 </script>
 
@@ -80,9 +56,4 @@ a {
   text-align: center;
 }
 
-.end-arrow {
-  display: block;
-  width: 188px;
-  margin: 3rem auto;
-}
 </style>
