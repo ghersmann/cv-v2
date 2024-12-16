@@ -20,8 +20,6 @@
       </router-link>
     </section>
 
-    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
-
     <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
       <div class="modal-content" @click.stop>
         <span class="close-btn" @click="closeModal">&times;</span>
@@ -34,15 +32,12 @@
 
 <script>
 import { ref } from 'vue'
-import { useArrowStore } from '@/stores/arrowStore.js'
-import { onMounted, onBeforeUnmount } from 'vue'
 import { usePortfolioStore } from '@/stores/portfolioStore.js'
 import { useRoute } from 'vue-router'
 
 export default {
   name: 'ProjectPortfolio',
   setup() {
-    const arrowStore = useArrowStore()
     const portfolioStore = usePortfolioStore()
     const route = useRoute()
 
@@ -63,23 +58,8 @@ export default {
       selectedImage.value = null
     }
 
-    const updateArrow = () => {
-      arrowStore.updateArrow()
-    }
-
-    onMounted(() => {
-      updateArrow()
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
-      window.addEventListener('resize', updateArrow)
-    })
-
-    onBeforeUnmount(() => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
-      window.removeEventListener('resize', updateArrow)
-    })
-
+   
     return {
-      arrowStore,
       project,
       isModalOpen,
       selectedImage,

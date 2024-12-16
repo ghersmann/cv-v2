@@ -36,13 +36,14 @@
           <h3>Git</h3>
         </section>
         <section class="skill-item">
-          <img src="@/assets/img/logos/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
-          <h3>Figma</h3>
-        </section>
-        <section class="skill-item">
           <img src="@/assets/img/logos/MongoDB_Fores-Green.svg" alt="MongoDB Logotype" width="130px" /><br />
           <h3>MongoDB</h3>
         </section>
+        <section class="skill-item">
+          <img src="@/assets/img/logos/Figma-logo.svg" alt="Figma Logotype" height="50px" /><br />
+          <h3>Figma</h3>
+        </section>
+      
         <section class="skill-item">
           <img src="@/assets/img/logos/aws-logo.png" alt="AWS Logotype" height="50px" /><br />
           <h3>AWS</h3>
@@ -61,37 +62,12 @@
         </section>
       </div>
     </section>
-
-    <img :src="arrowStore.currentArrow" alt="Decorative Arrow" class="arrow" />
   </article>
 </template>
 
 <script>
-import { useArrowStore } from '@/stores/arrowStore.js'
-import { onMounted, onBeforeUnmount } from 'vue'
 export default {
   name: 'ExperienceComponent',
-
-  setup() {
-    const arrowStore = useArrowStore()
-
-    const updateArrow = () => {
-      arrowStore.updateArrow()
-    }
-
-    onMounted(() => {
-      updateArrow()
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateArrow)
-      window.addEventListener('resize', updateArrow)
-    })
-
-    onBeforeUnmount(() => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', updateArrow)
-      window.removeEventListener('resize', updateArrow)
-    })
-
-    return { arrowStore }
-  }
 }
 </script>
 

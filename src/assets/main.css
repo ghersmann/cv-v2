@@ -30,7 +30,7 @@ html {
 
 body {
   background-color: rgb(252, 250, 247);
-  width: 80vw;
+  width: 90vw;
   max-width: 950px;
   margin: 1rem auto;
   box-shadow: 0px 5px 5px 5px rgb(247, 246, 246);
@@ -90,24 +90,6 @@ a,
   width: 100vw;
 }
 
-.line,
-.exp-horizontal-line,
-.portfolio-line {
-  margin: 1.7rem auto;
-  width: 20rem;
-  height: 0.1rem;
-  background-color: var(--dark-sticky-header);
-}
-
-.vertical-line {
-  display: none;
-}
-
-.arrow {
-  display: block;
-  margin: 3rem auto;
-}
-
 ul,
 li {
   margin: 0;
@@ -115,32 +97,23 @@ li {
   list-style: none;
 }
 
-.skills-grid-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  width: 30rem;
-  margin: 0 auto;
-  align-items: baseline;
+.photo-title-section {
+  display: flex;
 }
 
-.skill-item {
-  margin: 2rem auto;
-  padding: 0;
-  text-align: center;
+.photo-title-pitch {
+  display: block;
 }
 
-.skill-item-node {
-  grid-area: 3 / 1 / 4 / 2;
+.contact-header {
+  margin-top: 2rem;
+  text-align: left;
 }
 
-.skill-item-npm {
-  grid-area: 3/ 3/ 4 / 4;
-}
-
-.project-portfolio {
-  margin: 0 auto;
+.experience-item {
+  padding-left: 1rem;
+  border-left: 0.2rem solid var(--dark-sticky-header);
+  margin: 2rem 0;
 }
 
 .project-description {
@@ -164,7 +137,30 @@ li {
   margin-right: 2rem;
 }
 
+.skills-grid-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  width: 30rem;
+  margin: 0 auto;
+  align-items: baseline;
+}
+
+.skill-item {
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+}
+
+.project-portfolio {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 600px) {
+body {
+  width: 80vw;
+}
+
   .project-portfolio {
     max-width: 60rem;
     margin: 0 auto;
@@ -191,19 +187,6 @@ li {
     margin-right: 2rem;
   }
 
-  .line {
-    border-left: 0.1rem solid var(--dark-sticky-header);
-    width: 0;
-    height: 5rem;
-    margin: 0 auto;
-  }
-
-  .portfolio-line {
-    border-left: 0.1rem solid var(--dark-sticky-header);
-    width: 0;
-    height: 32rem;
-    margin: 0 auto;
-  }
 
   .portfolio-grid-column {
     display: grid;
@@ -213,25 +196,13 @@ li {
     margin: 0 auto;
   }
 
-  .vertical-line {
-    display: block;
-    border-left: 0.1rem solid var(--dark-sticky-header);
-    width: 0;
-    height: 30rem;
-    margin: 3.5rem auto;
-  }
-
-  .exp-horizontal-line {
-    display: none;
-  }
-
   .skills-grid-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 60rem;
+    grid-template-rows: 1fr;
+    width: 55rem;
     margin: 0 auto;
-    align-items: baseline;
+
   }
 
   .skill-item {
@@ -240,16 +211,19 @@ li {
     text-align: center;
   }
 
-  .skill-item-node,
-  .skill-item-npm {
-    grid-area: unset;
-  }
-
   .contact-grid-column {
     display: flex; 
     max-width: 60rem;
     margin: 0 auto;
   }
+
+  .contact-header {
+    text-align: right;
+    margin-right: 0;
+    margin-top: auto;
+    padding-right: 0.4rem;
+    border-right: 0.2rem solid var(--dark-sticky-header);
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -264,11 +238,20 @@ li {
   .portfolio-grid-column {
     margin: 0 2vw;
   }
+
+  .skills-grid-column {
+    width: 75rem;
+  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
   html {
+    background-color: black;
+  }
+
+  body {
     background-color: #333333;
+    box-shadow: 0px 5px 5px 5px rgb(32, 32, 32);
   }
 
   h1,
@@ -277,23 +260,12 @@ li {
   h4,
   p,
   a,
+  li,
   .routerlink {
     color: white;
   }
 
-  .line,
-  .portfolio-line,
-  .vertical-line {
-    border-left: 0.1rem solid white;
-  }
-
-  .portfolio-line,
-  .exp-horizontal-line,
-  .line {
-    background-color: white;
-  }
-
-  .end-arrow-black {
-    display: none;
+  .experience-item {
+    border-left: 0.2rem solid white;
   }
 }

@@ -60,20 +60,9 @@ h4 {
   margin-bottom: 2rem;
 }
 
-.experience-item {
-  padding-left: 1rem;
-  border-left: 0.2rem solid var(--dark-sticky-header);
-  margin: 3rem 0;
-}
-
 .experience-title {
   display: flex;
   align-items: baseline;
-  gap: 3rem;
-}
-
-.links-container {
-  display: flex;
   gap: 2rem;
 }
 
@@ -84,5 +73,6 @@ h4 {
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.7rem;
+  margin-bottom: 1rem;
 }
 </style>

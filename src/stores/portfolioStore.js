@@ -18,7 +18,7 @@ export const usePortfolioStore = defineStore('portfolio', {
 
   <p>For the cat logo, I wanted it to resemble a confused tourist who accidentally wandered onto the busiest shopping street instead of the Museum of Cultural History, which they were actually looking for.</p>
 
-  <p>The app itself is a SPA made with Vue.JS.</p>
+  <p>Tech Stack: HTML5, CSS3, JavaScript, Vue.js, MongoDB, Express.js, Node.js, Render, Git, Figma, RESTful API</p>
 `,
 
         images: [

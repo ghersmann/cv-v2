@@ -1,5 +1,6 @@
 <template>
   <article class="photo-title-pitch">
+    <section class="photo-title-section">
     <img
       class="gh-photo"
       src="../assets/img/bewerbungsbild-sven-gustav-hersmann-0003-medres.jpg"
@@ -10,6 +11,7 @@
       <li class="pitch-text">Frontend Developer</li>
       <li class="pitch-text">Web Designer</li>
       </ul>
+    </section>
     <ul class="contact-header">
     <h2>Contact</h2>
       <li><a class="pitch-text" href="mailto:gustav@gustavhersmann.com">gustav@gustavhersmann.com</a></li>
@@ -21,13 +23,6 @@
 </template>
 
 <style scoped>
-.photo-title-pitch {
-display: flex;
-align-items: flex-start;
-width: 100%;
-margin: 0 auto;
-}
-
 .gh-photo {
   margin-left: 0;
   width: 120px;
@@ -48,17 +43,7 @@ margin: 0 auto;
   text-decoration: none;
 }
 
-.contact-header {
-text-align: right;
-margin-right: 0;
-margin-top: auto;
-padding-right: 0.4rem;
-border-right: 0.2rem solid var(--dark-sticky-header);
-}
-
 h1, h2 {
   margin: 0;
 }
-
-
 </style>
